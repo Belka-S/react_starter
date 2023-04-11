@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/Belka-S/react_starter/static/css/main.7acaea2f.css",
-    "main.js": "/Belka-S/react_starter/static/js/main.1c37b54a.js",
-    "index.html": "/Belka-S/react_starter/index.html",
-    "main.7acaea2f.css.map": "/Belka-S/react_starter/static/css/main.7acaea2f.css.map",
-    "main.1c37b54a.js.map": "/Belka-S/react_starter/static/js/main.1c37b54a.js.map"
+    "main.css": "/react_starter/static/css/main.7acaea2f.css",
+    "main.js": "/react_starter/static/js/main.1c37b54a.js",
+    "index.html": "/react_starter/index.html",
+    "main.7acaea2f.css.map": "/react_starter/static/css/main.7acaea2f.css.map",
+    "main.1c37b54a.js.map": "/react_starter/static/js/main.1c37b54a.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
