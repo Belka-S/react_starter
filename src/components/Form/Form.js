@@ -10,12 +10,13 @@ const formSchema = Yup.object({
   currency: Yup.string().min(2, ' short').max(3, ' long').required(' required'),
 });
 
-export const FormikForm = ({ onSubmit }) => (
+// <ContactForm handleSubmit={this.addToState} />
+export const FormikForm = ({ handleSubmit }) => (
   <Formik
     initialValues={{ type: 'deposit', amount: 0, currency: 'usd' }}
     validationSchema={formSchema}
     onSubmit={(values, actions) =>
-      onSubmit({ ...values, id: nanoid() }, actions.resetForm())
+      handleSubmit({ ...values, id: nanoid() }, actions.resetForm())
     }
   >
     <Form>
