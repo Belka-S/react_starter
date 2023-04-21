@@ -10,7 +10,7 @@ const formSchema = Yup.object({
   currency: Yup.string().min(2, ' short').max(3, ' long').required(' required'),
 });
 
-// <ContactForm handleSubmit={this.addToState} />
+// form <ContactForm handleSubmit={this.addToState} />
 export const FormikForm = ({ handleSubmit }) => (
   <Formik
     initialValues={{ type: 'deposit', amount: 0, currency: 'usd' }}
@@ -43,7 +43,8 @@ export const FormikForm = ({ handleSubmit }) => (
   </Formik>
 );
 
-export const Filter = ({ handleSearch, filterValue }) => (
+// input // handleChange = e => this.setState({ e.target[name]: e.target[value] })
+export const Filter = ({ handleChange, filterValue }) => (
   <>
     <label>
       Find contacts by name
@@ -51,9 +52,49 @@ export const Filter = ({ handleSearch, filterValue }) => (
         type="text"
         name="filter"
         value={filterValue}
-        onChange={handleSearch}
+        onChange={handleChange}
       />
     </label>
-    <button onClick={handleSearch}>New search</button>
+    <button onClick={handleChange}>Clear</button>Change);
   </>
+);
+
+// radio // handleChange = e => this.setState({ e.target[name]: e.target[value] })
+export const Radio = ({ handleChange, type }) => (
+  <>
+    <label>
+      CSS
+      <input
+        type="radio"
+        name="type"
+        value="css"
+        checked={type === 'css'}
+        onChange={handleChange}
+      ></input>
+    </label>
+    <label>
+      HTML
+      <input
+        type="radio"
+        name="type"
+        value="html"
+        checked={type === 'html'}
+        onChange={handleChange}
+      ></input>
+    </label>
+  </>
+);
+
+// checkbox // handleChacked = e => this.setState({ e.target[name]: e.target.checked })
+export const Checkbox = ({ handleChange, agreement }) => (
+  <label>
+    Agree
+    <input
+      type="checkbox"
+      name="agreement"
+      value="cotnract"
+      checked={agreement}
+      onChange={handleChange}
+    />
+  </label>
 );
