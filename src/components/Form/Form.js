@@ -42,3 +42,18 @@ export const FormikForm = ({ handleSubmit }) => (
     </Form>
   </Formik>
 );
+
+export const Filter = ({ handleSearch, filterValue }) => (
+  <>
+    <label>
+      Find contacts by name
+      <input
+        type="text"
+        name="filter"
+        value={filterValue}
+        onChange={handleSearch}
+      />
+    </label>
+    <button onClick={handleSearch}>New search</button>
+  </>
+);
