@@ -1,100 +1,115 @@
 import { Formik } from 'formik';
+import { Form, Field, ErrorMessage } from './Form.styled';
+import { InputWrap } from './Form.styled';
+import css from 'styles/Buttons.module.scss';
+
+import { DiCss3, DiHtml5, DiJavascript } from 'react-icons/di';
+
 import * as Yup from 'yup';
 import { nanoid } from 'nanoid';
 
-import { Form, Field, Label, ErrorMessage } from './Form.styled';
+// FormikForm
+const formOptions = ['deposit', 'withdrawal', 'payment'];
 
 const formSchema = Yup.object({
-  type: Yup.string().oneOf(['deposit', 'withdrawal']).required(' required'),
-  amount: Yup.number().positive(' !!!>0').required(' required'),
-  currency: Yup.string().min(2, ' short').max(3, ' long').required(' required'),
+  operation: Yup.string().oneOf(formOptions).required('required'),
+  amount: Yup.number().positive('positive').required('required'),
+  currency: Yup.string().min(2, 'short').max(3, 'long').required('required'),
 });
 
-// form <ContactForm handleSubmit={this.addToState} />
 export const FormikForm = ({ handleSubmit }) => (
   <Formik
-    initialValues={{ type: 'deposit', amount: 0, currency: 'usd' }}
+    initialValues={{ operation: 'deposit', amount: 0, currency: 'usd' }}
     validationSchema={formSchema}
-    onSubmit={(values, actions) =>
-      handleSubmit({ ...values, id: nanoid() }, actions.resetForm())
-    }
+    onSubmit={(values, actions) => {
+      handleSubmit({ ...values, id: nanoid() });
+      actions.resetForm();
+    }}
   >
     <Form>
-      <Label>
-        Type
-        <ErrorMessage name="type" component="span" />
-        <Field component="select" name="type">
-          <option value="deposit">deposit</option>
-          <option value="withdrawal">withdraw</option>
+      <label>
+        Operation
+        <Field name="operation" component="select">
+          {formOptions.map(option => (
+            <option key={option} value={option}>
+              {option}
+            </option>
+          ))}
         </Field>
-      </Label>
-      <Label>
+        <ErrorMessage name="operation" component="div" />
+      </label>
+      <label>
         Amount
-        <ErrorMessage name="amount" component="span" />
         <Field name="amount" type="number" step="10"></Field>
-      </Label>
-      <Label>
+        <ErrorMessage name="amount" component="div" />
+      </label>
+      <label>
         Currency
-        <ErrorMessage name="currency" component="span" />
         <Field name="currency"></Field>
-      </Label>
-      <button type="submit">Save</button>
+        <ErrorMessage name="currency" component="div" />
+      </label>
+      <button type="submit">Submit Form</button>
     </Form>
   </Formik>
 );
 
-// input // handleChange = e => this.setState({ e.target[name]: e.target[value] })
-export const Filter = ({ handleChange, filterValue }) => (
-  <>
+// Input
+export const Input = ({ handleChange, inputValue, reset }) => (
+  <InputWrap>
     <label>
-      Find contacts by name
+      Filter
       <input
         type="text"
         name="filter"
-        value={filterValue}
+        value={inputValue}
         onChange={handleChange}
       />
     </label>
-    <button onClick={handleChange}>Clear</button>Change);
-  </>
+    <button className={css.btn} onClick={reset}>
+      Clear Input
+    </button>
+  </InputWrap>
 );
 
-// radio // handleChange = e => this.setState({ e.target[name]: e.target[value] })
-export const Radio = ({ handleChange, type }) => (
-  <>
-    <label>
-      CSS
-      <input
-        type="radio"
-        name="type"
-        value="css"
-        checked={type === 'css'}
-        onChange={handleChange}
-      ></input>
-    </label>
-    <label>
-      HTML
-      <input
-        type="radio"
-        name="type"
-        value="html"
-        checked={type === 'html'}
-        onChange={handleChange}
-      ></input>
-    </label>
-  </>
-);
+// Radio
+export const Radio = ({ handleChange, subject, allSabjects }) =>
+  allSabjects.map(el => (
+    <InputWrap key={el}>
+      <label>
+        {el}
+        {(() => {
+          switch (el) {
+            case 'css':
+              return <DiCss3 size="25" />;
+            case 'html':
+              return <DiHtml5 size="25" />;
+            default:
+              return <DiJavascript size="25" />;
+          }
+        })()}
+        <input
+          type="radio"
+          name="subject"
+          value={el}
+          checked={subject === el}
+          onChange={handleChange}
+        ></input>
+      </label>
+    </InputWrap>
+  ));
 
-// checkbox // handleChacked = e => this.setState({ e.target[name]: e.target.checked })
-export const Checkbox = ({ handleChange, agreement }) => (
-  <label>
-    Agree
-    <input
-      type="checkbox"
-      name="agreement"
-      value="cotnract"
-      checked={agreement}
-      onChange={handleChange}
-    />
-  </label>
+// Checkbox
+export const Checkbox = ({ handleCheckbox, agree }) => (
+  <InputWrap>
+    <label>
+      Agree
+      <input
+        type="checkbox"
+        name="agree"
+        // value="yes"
+        checked={agree}
+        onChange={handleCheckbox}
+      />
+    </label>
+  </InputWrap>
 );

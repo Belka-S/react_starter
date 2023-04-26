@@ -1,21 +1,42 @@
-# **React** [https://react.dev/]
+# **React**[https://react.dev/]
 
 - **[github]** https://github.com/Belka-S?tab=repositories
 - **[goit]** https://www.edu.goit.global/uk/learn/6420780/31183/31219/textbook
-- **[prop-types]** https://github.com/facebook/prop-types
-- **[styled-components]** https://styled-components.com/docs/basics
-- **[react-icons]** https://react-icons.github.io/react-icons/
-- **[date-fns]** https://date-fns.org
-- **[nanoid]** https://github.com/ai/nanoid/
-- **[classnames]** https://github.com/JedWatson/classnames
-- **[formik]** https://formik.org/docs/overview
-- **[react-hook-form]** https://www.react-hook-form.com/get-started
-- **[debounce-input**] https://github.com/nkbt/react-debounce-input
-- **[yup]** https://github.com/jquense/yup
-- **[yup-phone]** https://yup-phone.js.org
-- **[react-modal]** https://github.com/reactjs/react-modal
-- **[typefaces]** https://github.com/KyleAMathews/typefaces/tree/master/packages
-- **[webfontloader]** https://github.com/typekit/webfontloader
+- **[prop-types]**https://github.com/facebook/prop-types
+- **[styled-components]**https://styled-components.com/docs/basics
+- **[react-icons]**https://react-icons.github.io/react-icons/
+- **[date-fns]**https://date-fns.org
+- **[nanoid]**https://github.com/ai/nanoid/
+- **[classnames]**https://github.com/JedWatson/classnames
+- **[formik]**https://formik.org/docs/overview
+- **[react-hook-form]**https://www.react-hook-form.com/get-started
+- **[debounce-input**]\*\*https://github.com/nkbt/react-debounce-input
+- **[yup]**https://github.com/jquense/yup
+- **[yup-phone]**https://yup-phone.js.org
+- **[react-modal]**https://github.com/reactjs/react-modal
+- **[typefaces]**https://github.com/KyleAMathews/typefaces/tree/master/packages
+- **[webfontloader]**https://github.com/typekit/webfontloader
+- **[react-player]**https://github.com/CookPete/react-player
+- **[react-toastify]**https://fkhadra.github.io/react-toastify/introduction
+- **[infinite-scroll]**https://github.com/danbovey/react-infinite-scroller
+- **[mockapi]**https://mockapi.io/projects
+- **[]**
+- **[]**
+- **[]**
+- **[]**
+- **[]**
+- **[]**
+- **[]**
+- **[]**
+- **[]**
+- **[]**
+- **[]**
+- **[]**
+- **[]**
+- **[]**
+- **[]**
+- **[]**
+- **[]**
 - **[]**
 - **[]**
 - **[]**
