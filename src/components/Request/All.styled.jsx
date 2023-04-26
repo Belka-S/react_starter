@@ -29,7 +29,7 @@ export const Form = styled.form`
     }
 
     &:disabled {
-      cursor: none;
+      cursor: default;
       background-color: gray;
     }
   }

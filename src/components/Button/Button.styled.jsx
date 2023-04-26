@@ -20,7 +20,7 @@ export const Btn = styled.button`
   }
 
   &:disabled {
-    cursor: none;
+    cursor: default;
     background-color: gray;
   }
 
