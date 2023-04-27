@@ -10,7 +10,8 @@
 - **[classnames]**https://github.com/JedWatson/classnames
 - **[formik]**https://formik.org/docs/overview
 - **[react-hook-form]**https://www.react-hook-form.com/get-started
-- **[debounce-input**]\*\*https://github.com/nkbt/react-debounce-input
+- **[react-select]**https://react-select.com/home
+- **[debounce-input]**https://github.com/nkbt/react-debounce-input
 - **[yup]**https://github.com/jquense/yup
 - **[yup-phone]**https://yup-phone.js.org
 - **[react-modal]**https://github.com/reactjs/react-modal
@@ -18,11 +19,12 @@
 - **[webfontloader]**https://github.com/typekit/webfontloader
 - **[react-player]**https://github.com/CookPete/react-player
 - **[react-toastify]**https://fkhadra.github.io/react-toastify/introduction
+- **[react-hot-toast]**https://react-hot-toast.com/
 - **[infinite-scroll]**https://github.com/danbovey/react-infinite-scroller
 - **[mockapi]**https://mockapi.io/projects
-- **[]**
-- **[]**
-- **[]**
+- **[react-select]**https://react-select.com/home
+- **[react-spinners]**https://www.davidhu.io/react-spinners/
+- **[content-loader]**https://github.com/danilowoz/react-content-loader
 - **[]**
 - **[]**
 - **[]**
