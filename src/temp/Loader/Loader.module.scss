@@ -1,7 +1,9 @@
-import { ImSpinner2 as spinnerIcon } from 'react-icons/im';
-import styled from 'styled-components';
+.Wrap {
+  display: flex;
+  align-items: center;
+}
 
-export const ReactIconSpinner = styled(spinnerIcon)`
+.IconSpinner {
   margin-right: 10px;
   animation: icon-spin 2s infinite linear;
 
@@ -13,4 +15,4 @@ export const ReactIconSpinner = styled(spinnerIcon)`
       transform: rotate(359deg);
     }
   }
-`;
+}

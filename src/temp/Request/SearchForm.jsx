@@ -1,6 +1,6 @@
 import { Component } from 'react';
 
-import { Form } from 'components/Request/All.styled';
+import { Form } from './All.styled';
 
 export class SearchForm extends Component {
   state = {

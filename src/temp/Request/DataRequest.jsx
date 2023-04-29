@@ -2,7 +2,7 @@ import { Component } from 'react';
 import { SearchView } from './SearchView';
 import { PendingView } from './PendingView';
 import { ErrorView } from './ErrorView';
-import * as dataAPI from 'components/Request/DataApi';
+import * as dataAPI from './DataApi';
 
 const IDLE = 'idle';
 const PENDING = 'pending';

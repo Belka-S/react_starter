@@ -1,13 +1,4 @@
-import styled from 'styled-components';
-
-import {
-  Field as FormikField,
-  Form as FormikForm,
-  ErrorMessage as FormikError,
-} from 'formik';
-
-// Formik Form
-export const Form = styled(FormikForm)`
+.Form {
   display: flex;
 
   label {
@@ -37,22 +28,18 @@ export const Form = styled(FormikForm)`
       background-color: #2472b2;
     }
   }
-`;
 
-export const Field = styled(FormikField)`
-  width: 200px;
-  color: darkblue;
-`;
+  Field {
+    width: 200px;
+    color: darkblue;
+  }
+}
 
-export const ErrorMessage = styled(FormikError)`
+.Error {
   color: tomato;
-`;
+}
 
-// Input
-export const InputForm = styled.form``;
-
-// Div
-export const InputWrap = styled.div`
+.InputWrap {
   display: inline-flex;
   margin-right: 30px;
 
@@ -67,4 +54,24 @@ export const InputWrap = styled.div`
       margin-right: 30px;
     }
   }
-`;
+}
+
+.Btn {
+  padding: 5px 50px;
+  margin-bottom: 20px;
+
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  background-color: steelblue;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: background-color 250ms;
+
+  &:hover,
+  &:focus {
+    background-color: #2472b2;
+  }
+}

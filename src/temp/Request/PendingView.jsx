@@ -1,8 +1,8 @@
-import { Spinner } from 'components/Loader/Loader';
+import { IconSpinner } from '../Loader/Loader';
 import { SearchView } from './SearchView';
 import pendingImage from 'img/mark-question.png';
 
-import { Div } from 'components/Request/All.styled';
+import { Div } from './All.styled';
 
 export const PendingView = ({ searchQuery }) => {
   const data = {
@@ -13,7 +13,7 @@ export const PendingView = ({ searchQuery }) => {
 
   return (
     <Div role="alert">
-      <Spinner size="16" message={`Loading: ${searchQuery}`} />
+      <IconSpinner size="16" message={`Loading: ${searchQuery}`} />
       <SearchView fetchedData={data} />
     </Div>
   );

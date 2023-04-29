@@ -1,12 +1,9 @@
-import { Formik } from 'formik';
-import { Form, Field, ErrorMessage } from './Form.styled';
-import { InputWrap } from './Form.styled';
-import css from 'styles/Buttons.module.scss';
-
+import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { DiCss3, DiHtml5, DiJavascript } from 'react-icons/di';
-
 import * as Yup from 'yup';
 import { nanoid } from 'nanoid';
+
+import css from './Form.module.scss';
 
 // FormikForm
 const formOptions = ['deposit', 'withdrawal', 'payment'];
@@ -26,7 +23,7 @@ export const FormikForm = ({ handleSubmit }) => (
       actions.resetForm();
     }}
   >
-    <Form>
+    <Form className={css.Form}>
       <label>
         Operation
         <Field name="operation" component="select">
@@ -36,17 +33,17 @@ export const FormikForm = ({ handleSubmit }) => (
             </option>
           ))}
         </Field>
-        <ErrorMessage name="operation" component="div" />
+        <ErrorMessage className={css.Error} name="operation" component="div" />
       </label>
       <label>
         Amount
         <Field name="amount" type="number" step="10"></Field>
-        <ErrorMessage name="amount" component="div" />
+        <ErrorMessage className={css.Error} name="amount" component="div" />
       </label>
       <label>
         Currency
         <Field name="currency"></Field>
-        <ErrorMessage name="currency" component="div" />
+        <ErrorMessage className={css.Error} name="currency" component="div" />
       </label>
       <button type="submit">Submit Form</button>
     </Form>
@@ -55,7 +52,7 @@ export const FormikForm = ({ handleSubmit }) => (
 
 // Input
 export const Input = ({ handleChange, inputValue, reset }) => (
-  <InputWrap>
+  <div className={css.InputWrap}>
     <label>
       Filter
       <input
@@ -65,16 +62,16 @@ export const Input = ({ handleChange, inputValue, reset }) => (
         onChange={handleChange}
       />
     </label>
-    <button className={css.btn} onClick={reset}>
+    <button className={css.Btn} onClick={reset}>
       Clear Input
     </button>
-  </InputWrap>
+  </div>
 );
 
 // Radio
 export const Radio = ({ handleChange, subject, allSabjects }) =>
   allSabjects.map(el => (
-    <InputWrap key={el}>
+    <div className={css.InputWrap} key={el}>
       <label>
         {el}
         {(() => {
@@ -95,12 +92,12 @@ export const Radio = ({ handleChange, subject, allSabjects }) =>
           onChange={handleChange}
         ></input>
       </label>
-    </InputWrap>
+    </div>
   ));
 
 // Checkbox
 export const Checkbox = ({ handleCheckbox, agree }) => (
-  <InputWrap>
+  <div className={css.InputWrap}>
     <label>
       Agree
       <input
@@ -111,5 +108,5 @@ export const Checkbox = ({ handleCheckbox, agree }) => (
         onChange={handleCheckbox}
       />
     </label>
-  </InputWrap>
+  </div>
 );

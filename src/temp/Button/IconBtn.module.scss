@@ -1,26 +1,25 @@
-import styled from 'styled-components';
-
-export const Btn = styled.button`
+.IconBtn {
   position: absolute;
   top: 20px;
   right: 20px;
 
   margin: 0;
-  padding: 8px;
+  padding: 10px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
-  border: 1px solid black;
+  border: none;
   border-radius: 50%;
   cursor: pointer;
   color: white;
-  background-color: transparent;
+  fill: white;
+  background-color: rgba(0, 0, 0, 0.2);
   font: inherit;
-  transition: fill 250ms;
+  transition: fill 250ms, border-color 250ms;
 
   &:hover,
   &:focus {
     fill: tomato;
   }
-`;
+}

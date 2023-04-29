@@ -1,11 +1,16 @@
 import PropTypes from 'prop-types';
-import { Btn } from 'components/Button/IconBtn.styled';
+import css from './IconBtn.module.scss';
 
 // Icon Button
 export const IconBtn = ({ children, onClick, ...allyProps }) => (
-  <Btn type="button" onClick={onClick} {...allyProps}>
+  <button
+    className={css.IconBtn}
+    type="button"
+    onClick={onClick}
+    {...allyProps}
+  >
     {children}
-  </Btn>
+  </button>
 );
 
 IconBtn.defaultProps = { onClick: null, children: null };

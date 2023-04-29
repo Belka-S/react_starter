@@ -1,8 +1,9 @@
+import React from 'react';
+
 import { PureComponent } from 'react';
 import classNames from 'classnames';
 
-import css from 'styles/Buttons.module.scss';
-import { DivWrap } from './Collection.styled';
+import css from './Collection.module.scss';
 
 const LS_KEY = 'collection_active_item_id';
 
@@ -33,12 +34,12 @@ export class Collection extends PureComponent {
   };
 
   addClass = id => {
-    return classNames(css.btn, {
-      [css.btn__active]: id === this.state.activeItemId,
+    return classNames(css.Btn, {
+      [css.Btn__active]: id === this.state.activeItemId,
     });
-    // const currentClass = [css.btn];
+    // const currentClass = [css.Btn];
     // if (id === this.state.activeItemId) {
-    //   currentClass.push(css.btn__active);
+    //   currentClass.push(css.Btn__active);
     // }
     // return currentClass.join(' ');
   };
@@ -50,7 +51,7 @@ export class Collection extends PureComponent {
     const activeItem = items.find(el => el.id === activeItemId);
 
     return (
-      <DivWrap>
+      <div className={css.Collection}>
         <div>
           {items.map(item => (
             <button
@@ -65,7 +66,7 @@ export class Collection extends PureComponent {
         {activeItem && (
           <img src={activeItem.avatar} alt="icon" width="100" height="100" />
         )}
-      </DivWrap>
+      </div>
     );
   }
 }

@@ -1,11 +1,10 @@
 import PropTypes from 'prop-types';
-import { Btn } from 'components/Button/Button.styled';
+import css from './Button.module.scss';
 
-// Button
 export const Button = ({ children, onClick }) => (
-  <Btn type="button" onClick={onClick}>
+  <button className={css.Button} type="button" onClick={onClick}>
     {children}
-  </Btn>
+  </button>
 );
 
 Button.propTypes = {
