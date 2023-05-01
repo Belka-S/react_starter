@@ -2,7 +2,11 @@ import { Component } from 'react';
 
 import { Section } from 'components/Section/Section';
 
-export class App extends Component {
+export const App = () => {
+  return <Section title=""></Section>;
+};
+
+export class AppClass extends Component {
   // ---------------State--------------- //
   state = {};
 
@@ -15,8 +19,8 @@ export class App extends Component {
 
   // -----------Custom Methods---------- //
 
-  // ------------Render Method------------ //
+  // -----------Render Method----------- //
   render() {
-    return <Section mainTitle="React Template" />;
+    return <Section title=""></Section>;
   }
 }

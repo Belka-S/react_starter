@@ -24,9 +24,9 @@
 - **[react-select]**https://react-select.com/home
 - **[react-spinners]**https://www.davidhu.io/react-spinners/
 - **[content-loader]**https://github.com/danilowoz/react-content-loader
-- **[]**
-- **[]**
-- **[]**
+- **[react-hook-form]**https://react-hook-form.com/
+- **[react-query]**https://tanstack.com/query/latest/docs/react/overview
+- **[react-use]**https://github.com/streamich/react-use#readme
 - **[]**
 - **[]**
 - **[]**
