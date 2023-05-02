@@ -1,51 +1,37 @@
-import { Component } from 'react';
+import { useEffect, useState } from 'react';
 import css from './Styles.module.scss';
 
-export class SearchForm extends Component {
-  state = {
-    searchQuery: '',
-    isDisabled: true,
-  };
+export const SearchForm = ({ onSearch }) => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [isDisabled, setIsDisabled] = useState(true);
 
-  componentDidUpdate(prevProps, prevState) {
-    const { searchQuery } = this.state;
+  useEffect(() => {
+    setIsDisabled(searchQuery.trim(' ') === '');
+  }, [searchQuery]);
 
-    if (prevState.searchQuery !== searchQuery) {
-      const isDisabled = searchQuery.trim(' ') === '';
-
-      this.setState({ isDisabled });
-    }
-  }
-
-  handleSubmit = e => {
+  const handleSubmit = e => {
     e.preventDefault();
-    this.props.onSearch(this.state.searchQuery);
-  };
-  handleChange = e => {
-    this.setState({ searchQuery: e.target.value.toLowerCase() });
-  };
-  handleReset = e => {
-    this.setState({ searchQuery: '' });
-    this.props.onSearch('');
+    onSearch(searchQuery);
   };
 
-  render() {
-    const { searchQuery, isDisabled } = this.state;
+  const handleChange = e => {
+    setSearchQuery(e.target.value.toLowerCase());
+  };
 
-    return (
-      <form className={css.Form} onSubmit={this.handleSubmit}>
-        <input
-          name="search"
-          value={searchQuery}
-          onChange={this.handleChange}
-        ></input>
-        <button type="submit" disabled={isDisabled}>
-          Search
-        </button>
-        <button type="button" onClick={this.handleReset} disabled={isDisabled}>
-          Reset
-        </button>
-      </form>
-    );
-  }
-}
+  const handleReset = e => {
+    setSearchQuery('');
+    onSearch('');
+  };
+
+  return (
+    <form className={css.Form} onSubmit={handleSubmit}>
+      <input name="search" value={searchQuery} onChange={handleChange}></input>
+      <button type="submit" disabled={isDisabled}>
+        Search
+      </button>
+      <button type="button" onClick={handleReset} disabled={isDisabled}>
+        Reset
+      </button>
+    </form>
+  );
+};

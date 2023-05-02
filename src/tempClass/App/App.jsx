@@ -1,16 +1,22 @@
 import { Section } from '../Section/Section';
-import { AppRequest } from 'tempClass/Request/AppRequest';
+import { AuthProvider } from 'tempClass/Auth/AuthProvider';
+import { AuthBar } from 'tempClass/Auth/AuthBar';
+import { Timer } from 'tempClass/Timer/Timer';
 import { Collection } from 'tempClass/Collection/Collection';
 import { AppModal } from 'tempClass/Modal/AppModal';
 import { AppForm } from 'tempClass/Form/AppForm';
+import { AppRequest } from 'tempClass/Request/AppRequest';
 
 export const AppClass = () => {
   return (
-    <Section mainTitle="React Hook Template">
+    <AuthProvider>
+      <Section mainTitle="React Hook Template" />
+      <AuthBar />
+      <Timer />
+      <Collection />
       <AppForm />
       <AppModal />
-      <Collection />
       <AppRequest />
-    </Section>
+    </AuthProvider>
   );
 };

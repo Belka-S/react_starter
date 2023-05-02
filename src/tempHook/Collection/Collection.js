@@ -8,6 +8,7 @@ const LS_KEY = 'collection_active_item_id';
 
 export function Collection() {
   const [activeItemId, setActiveItemId] = useLocalStorage(LS_KEY, null);
+  console.log('classNames, useLocalStorage');
 
   const addClass = id => {
     return classNames(css.Btn, {

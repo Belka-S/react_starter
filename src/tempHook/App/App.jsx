@@ -1,11 +1,11 @@
 import { Section } from '../Section/Section';
-import { AuthProvider } from 'tempHook/Auth/Provider';
+import { AuthProvider } from 'tempHook/Auth/AuthProvider';
 import { AuthBar } from 'tempHook/Auth/AuthBar';
 import { Timer } from 'tempHook/Timer/Timer';
-import { AppRequest } from 'tempHook/Request/AppRequest';
 import { Collection } from 'tempHook/Collection/Collection';
-import { AppModal } from 'tempHook/Modal/AppModal';
 import { AppForm } from 'tempHook/Form/AppForm';
+import { AppModal } from 'tempHook/Modal/AppModal';
+import { AppRequest } from 'tempHook/Request/AppRequest';
 
 export const AppHook = () => {
   return (
@@ -13,9 +13,9 @@ export const AppHook = () => {
       <Section mainTitle="React Hook Template" />
       <AuthBar />
       <Timer />
+      <Collection />
       <AppForm />
       <AppModal />
-      <Collection />
       <AppRequest />
     </AuthProvider>
   );

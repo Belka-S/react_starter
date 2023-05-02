@@ -1,50 +1,57 @@
-import { Component } from 'react';
+import { useEffect, useReducer } from 'react';
 import { SearchView } from './SearchView';
 import { PendingView } from './PendingView';
 import { ErrorView } from './ErrorView';
 import * as dataAPI from './DataApi';
 
-const IDLE = 'idle';
-const PENDING = 'pending';
-const REJECTED = 'rejected';
-const RESOLVED = 'resolved';
+const STATUS = {
+  idle: 'idle',
+  pending: 'pending',
+  rejected: 'rejected',
+  resolved: 'resolved',
+};
 
-export class DataRequest extends Component {
-  state = {
+function reducer(state, action) {
+  return { ...state, ...action };
+}
+
+export const DataRequest = ({ searchQuery }) => {
+  const [state, dispatch] = useReducer(reducer, {
     fetchedData: null,
     error: null,
-    status: IDLE,
-  };
+    status: STATUS.idle,
+  });
+  console.log('useReducer');
 
-  componentDidUpdate(prevProps, prevState) {
-    const { searchQuery } = this.props;
-
-    if (prevProps.searchQuery !== searchQuery) {
-      if (searchQuery === '') return this.setState({ status: IDLE });
-
-      this.setState({ status: PENDING });
-      dataAPI
-        .fetchData(searchQuery)
-        .then(data => this.setState({ fetchedData: data, status: RESOLVED }))
-        .catch(error => this.setState({ error, status: REJECTED }));
+  useEffect(() => {
+    if (searchQuery === '') {
+      dispatch({ status: STATUS.idle });
+      return;
     }
-  }
 
-  render() {
-    const { fetchedData, error, status } = this.state;
-    const { searchQuery } = this.props;
+    dispatch({ status: STATUS.pending });
+    dataAPI
+      .fetchData(searchQuery)
+      .then(data => {
+        dispatch({ fetchedData: data });
+        dispatch({ status: STATUS.resolved });
+      })
+      .catch(error => {
+        dispatch({ error });
+        dispatch({ status: STATUS.rejected });
+      });
+  }, [searchQuery]);
 
-    switch (status) {
-      case IDLE:
-        return <span>Enter searchQuery</span>;
-      case PENDING:
-        return <PendingView searchQuery={searchQuery} />;
-      case REJECTED:
-        return <ErrorView message={error.message} />;
-      case RESOLVED:
-        return <SearchView fetchedData={fetchedData} />;
-      default:
-        break;
-    }
+  switch (state.status) {
+    case STATUS.idle:
+      return <span>Enter searchQuery</span>;
+    case STATUS.pending:
+      return <PendingView searchQuery={searchQuery} />;
+    case STATUS.rejected:
+      return <ErrorView message={state.error.message} />;
+    case STATUS.resolved:
+      return <SearchView fetchedData={state.fetchedData} />;
+    default:
+      break;
   }
-}
+};

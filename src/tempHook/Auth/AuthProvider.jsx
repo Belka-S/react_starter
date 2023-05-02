@@ -4,6 +4,7 @@ import authContext from './context';
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
   const [isLoggedIn, setIsLogedIn] = useState(false);
+  console.log('useMemo');
 
   const onLogIn = () => {
     setUser({ name: 'Mango' });

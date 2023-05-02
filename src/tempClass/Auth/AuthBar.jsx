@@ -14,7 +14,7 @@ export const AuthBar = () => {
           {isLoggedIn ? (
             <>
               <button className={css.Button} type="button" onClick={onLogOut}>
-                {user.name}
+                {user}
               </button>
               <span style={{ marginLeft: '20px' }}>Push to log out!</span>
             </>

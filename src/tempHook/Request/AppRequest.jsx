@@ -1,23 +1,19 @@
-import { Component } from 'react';
+import { useState } from 'react';
 import { Section } from '../Section/Section';
 import { DataRequest } from '../Request/DataRequest';
 import { SearchForm } from '../Request/SearchForm';
 
-export class AppRequest extends Component {
-  state = {
-    searchQuery: '',
+export const AppRequest = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const handleSearch = searchQuery => {
+    setSearchQuery(searchQuery);
   };
 
-  handleSearch = searchQuery => {
-    this.setState({ searchQuery });
-  };
-
-  render() {
-    return (
-      <Section title="http-Request">
-        <SearchForm onSearch={this.handleSearch} />
-        <DataRequest searchQuery={this.state.searchQuery} />
-      </Section>
-    );
-  }
-}
+  return (
+    <Section title="http-Request">
+      <SearchForm onSearch={handleSearch} />
+      <DataRequest searchQuery={searchQuery} />
+    </Section>
+  );
+};

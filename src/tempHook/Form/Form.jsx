@@ -24,8 +24,8 @@ export const FormikForm = ({ handleSubmit }) => (
   >
     <Form className={css.Form}>
       <label>
-        Operation
-        <Field name="operation" component="select">
+        Transaction type
+        <Field name="type" component="select">
           {formOptions.map(option => (
             <option key={option} value={option}>
               {option}
@@ -44,13 +44,13 @@ export const FormikForm = ({ handleSubmit }) => (
         <Field name="currency"></Field>
         <ErrorMessage className={css.Error} name="currency" component="div" />
       </label>
-      <button type="submit">Submit Form</button>
+      <button type="submit">Submit</button>
     </Form>
   </Formik>
 );
 
 // Input
-export const Input = ({ handleChange, inputValue, reset }) => (
+export const Input = ({ handleChange, inputValue }) => (
   <div className={css.InputWrap}>
     <label>
       Filter
@@ -61,26 +61,25 @@ export const Input = ({ handleChange, inputValue, reset }) => (
         onChange={handleChange}
       />
     </label>
-    <button className={css.Btn} onClick={reset}>
-      Clear Input
-    </button>
   </div>
 );
 
 // Radio
-export const Radio = ({ handleChange, subject, allSabjects }) =>
-  allSabjects.map(el => (
+export const Radio = ({ handleChange, subject }) =>
+  formOptions.map(el => (
     <div className={css.InputWrap} key={el}>
       <label>
         {el}
         {(() => {
           switch (el) {
-            case 'css':
+            case formOptions[0]:
               return <DiCss3 size="25" />;
-            case 'html':
+            case formOptions[1]:
               return <DiHtml5 size="25" />;
-            default:
+            case formOptions[2]:
               return <DiJavascript size="25" />;
+            default:
+              return console.log('No Icon');
           }
         })()}
         <input
@@ -98,7 +97,7 @@ export const Radio = ({ handleChange, subject, allSabjects }) =>
 export const Checkbox = ({ handleCheckbox, agree }) => (
   <div className={css.InputWrap}>
     <label>
-      Agree
+      Show transactions
       <input
         type="checkbox"
         name="agree"
