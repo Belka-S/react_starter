@@ -1,26 +1,44 @@
-import { Component } from 'react';
+import { Routes, Route } from 'react-router-dom';
 
-import { Section } from 'components/Section/Section';
+import { SharedLayout } from 'components/SharedLayout/SharedLayout';
+import Home from 'pages/Home';
+import AppHook from 'pages/tempHook/App/AppHook';
+import AppClass from 'pages/tempClass/App/AppClass';
+import AppImgFinder from 'pages/imgFinder/App/AppImgFinder';
 
-export const App = () => {
-  return <Section title=""></Section>;
-};
+export const App = () => (
+  <Routes>
+    <Route path="/" element={<SharedLayout />}>
+      <Route index element={<Home />} />
+      <Route path="/tempClass" element={<AppClass />} />
+      <Route path="/tempHook" element={<AppHook />} />
+      <Route path="/imgFinder" element={<AppImgFinder />} />
+      <Route path="*" element={<span>Not Found</span>} />
+    </Route>
+  </Routes>
+);
 
-export class AppClass extends Component {
-  // ---------------State--------------- //
-  state = {};
+// ---------------------------------------- //
+// -----------App Class Template----------- //
+// ---------------------------------------- //
 
-  // ---------LifeCycle Methods--------- //
-  componentDidMount() {}
+// import { Component } from 'react';
 
-  componentDidUpdate(prevProps, prevState) {}
+// export class AppClass extends Component {
+//   // ---------------State--------------- //
+//   state = {};
 
-  componentWillUnmount() {}
+//   // ---------LifeCycle Methods--------- //
+//   componentDidMount() {}
 
-  // -----------Custom Methods---------- //
+//   componentDidUpdate(prevProps, prevState) {}
 
-  // -----------Render Method----------- //
-  render() {
-    return <Section title=""></Section>;
-  }
-}
+//   componentWillUnmount() {}
+
+//   // -----------Custom Methods---------- //
+
+//   // -----------Render Method----------- //
+//   render() {
+//     return <Section title=""></Section>;
+//   }
+// }

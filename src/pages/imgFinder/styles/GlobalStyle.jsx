@@ -5,17 +5,12 @@ export const GlobalStyle = createGlobalStyle`
 /* Style */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  color: #212121;
+  background-color: #fff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  font-family: 'Roboto', sans-serif;
-  letter-spacing: 0.02em;
-  line-height: 1.5;
-  color: #000000;
-  background-color: #dbe4ed;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -61,10 +56,6 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-}
-
-a{
-  text-decoration: none;
 }
 
 button,
