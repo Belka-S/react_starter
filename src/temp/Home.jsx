@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
-import { Section } from 'components/Section/Section';
 
 const Home = () => {
   const [goBack, setGoBack] = useState(false);
@@ -13,7 +12,7 @@ const Home = () => {
 
   return (
     <main>
-      <Section mainTitle="React Template" />
+      <h1 style={{ textAlign: 'center' }}>React Template</h1>
       {goBack && <Navigate to={backLinkHref} replace />}
     </main>
   );

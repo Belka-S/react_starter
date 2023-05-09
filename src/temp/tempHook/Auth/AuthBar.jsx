@@ -28,6 +28,7 @@ export const AuthBar = () => {
 
 function LogOutUseNavigate() {
   const navigate = useNavigate();
+  console.log(navigate);
 
   const naviHome = e => {
     navigate('/', { replace: true });

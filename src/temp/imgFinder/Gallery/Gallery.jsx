@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { GalleryItem } from 'pages/imgFinder/GalleryItem/GalleryItem';
+import { GalleryItem } from 'temp/imgFinder/GalleryItem/GalleryItem';
 import css from '../styles/Styles.module.scss';
 
 export const Gallery = ({ normData }) => (

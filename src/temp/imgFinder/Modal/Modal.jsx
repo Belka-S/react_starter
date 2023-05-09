@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { CloseBtn, NextBtn, PrevBtn } from 'pages/imgFinder/Button/IconBtn';
+import { CloseBtn, NextBtn, PrevBtn } from 'temp/imgFinder/Button/IconBtn';
 import { createPortal } from 'react-dom';
 import css from '../styles/Styles.module.scss';
 

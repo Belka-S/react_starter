@@ -1,11 +1,11 @@
 import { Outlet, useLocation } from 'react-router-dom';
-import { Section, Header, NaviLink } from './SharedLayout.styled';
+import { Container, Header, NaviLink } from './SharedLayout.styled';
 
 export const SharedLayout = () => {
   const location = useLocation();
 
   return (
-    <Section>
+    <Container>
       <Header>
         <nav>
           <NaviLink to="/" state={{ from: location }}>
@@ -17,6 +17,6 @@ export const SharedLayout = () => {
         </nav>
       </Header>
       <Outlet />
-    </Section>
+    </Container>
   );
 };

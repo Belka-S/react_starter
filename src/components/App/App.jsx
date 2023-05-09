@@ -1,10 +1,10 @@
 import { Routes, Route } from 'react-router-dom';
 
 import { SharedLayout } from 'components/SharedLayout/SharedLayout';
-import Home from 'pages/Home';
-import AppHook from 'pages/tempHook/App/AppHook';
-import AppClass from 'pages/tempClass/App/AppClass';
-import AppImgFinder from 'pages/imgFinder/App/AppImgFinder';
+import Home from 'temp/Home';
+import AppHook from 'temp/tempHook/App/AppHook';
+import AppClass from 'temp/tempClass/App/AppClass';
+import AppImgFinder from 'temp/imgFinder/App/AppImgFinder';
 
 export const App = () => (
   <Routes>

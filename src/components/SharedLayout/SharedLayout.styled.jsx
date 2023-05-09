@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-export const Section = styled.div`
+export const Container = styled.div`
   padding-right: 10px;
   padding-left: 10px;
   position: relative;
