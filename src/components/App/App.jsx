@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 
 import { SharedLayout } from 'components/SharedLayout/SharedLayout';
 import Home from 'temp/Home';
@@ -13,7 +13,7 @@ export const App = () => (
       <Route path="/tempClass" element={<AppClass />} />
       <Route path="/tempHook" element={<AppHook />} />
       <Route path="/imgFinder" element={<AppImgFinder />} />
-      <Route path="*" element={<span>Not Found</span>} />
+      <Route path="*" element={<Navigate to="/" />} />
     </Route>
   </Routes>
 );
