@@ -3,6 +3,9 @@
 - **[github]** https://github.com/Belka-S?tab=repositories
 - **[goit]** https://www.edu.goit.global/uk/learn/6420780/31183/31219/textbook
 - **[reactrouter]**https://reactrouter.com/en/main
+- **[redux]**https://redux.js.org/
+- **[react-redux]**https://react-redux.js.org/
+- **[redux-toolkit]**https://redux-toolkit.js.org/
 - **[prop-types]**https://github.com/facebook/prop-types
 - **[styled-components]**https://styled-components.com/docs/basics
 - **[react-icons]**https://react-icons.github.io/react-icons/
@@ -29,8 +32,6 @@
 - **[react-query]**https://tanstack.com/query/latest/docs/react/overview
 - **[react-use]**https://github.com/streamich/react-use#readme
 - **[hh-mm-ss]**https://www.npmjs.com/package/hh-mm-ss
-- **[]**
-- **[]**
 - **[]**
 - **[]**
 - **[]**
