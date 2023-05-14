@@ -63,7 +63,7 @@ const reducer = (state, { type, payload }) => {
       };
 
     default:
-      throw new Error(`Unsupported action type${type}`);
+      return state;
   }
 };
 

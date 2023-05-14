@@ -3,9 +3,6 @@
 - **[github]** https://github.com/Belka-S?tab=repositories
 - **[goit]** https://www.edu.goit.global/uk/learn/6420780/31183/31219/textbook
 - **[reactrouter]**https://reactrouter.com/en/main
-- **[redux]**https://redux.js.org/
-- **[react-redux]**https://react-redux.js.org/
-- **[redux-toolkit]**https://redux-toolkit.js.org/
 - **[prop-types]**https://github.com/facebook/prop-types
 - **[styled-components]**https://styled-components.com/docs/basics
 - **[react-icons]**https://react-icons.github.io/react-icons/
@@ -46,7 +43,12 @@
 - **[]**
 - **[]**
 - **[]**
-- **[react-homework-template]**https://github.com/goitacademy/react-homework-template
+- **[redux]**https://redux.js.org/
+- **[react-redux]**https://react-redux.js.org/
+- **[redux-toolkit]**https://redux-toolkit.js.org/
+
+# **react-homework-template**[https://github.com/goitacademy/react-homework-template]
+
 - **[dependencies]**{ "@testing-library/jest-dom": "^5.16.3",
   "@testing-library/react": "^12.1.4", "@testing-library/user-event": "^13.5.0",
   "react": "^18.1.0", "react-dom": "^18.1.0", "react-scripts": "5.0.1",
