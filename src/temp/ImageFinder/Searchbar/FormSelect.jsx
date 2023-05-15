@@ -49,8 +49,7 @@ const optionsPerPage = [
 ];
 
 export const SelectPerPage = ({ handleSelect }) => {
-  const state = useSelector(state => state.imgFinder);
-  const { per_page } = state.searchOptions;
+  const { per_page } = useSelector(state => state.imgFinder.searchOptions);
 
   return (
     <Select
@@ -71,8 +70,7 @@ const optionsImagaType = SAEARCH_OPTIONS().image_type.map(el => ({
 }));
 
 export const SelectImageType = ({ handleSelect }) => {
-  const state = useSelector(state => state.imgFinder);
-  const { image_type } = state.searchOptions;
+  const { image_type } = useSelector(state => state.imgFinder.searchOptions);
 
   return (
     <Select
@@ -94,8 +92,7 @@ const optionsOrientation = SAEARCH_OPTIONS().orientation.map(el => ({
 }));
 
 export const SelectImageOrientation = ({ handleSelect }) => {
-  const state = useSelector(state => state.imgFinder);
-  const { orientation } = state.searchOptions;
+  const { orientation } = useSelector(state => state.imgFinder.searchOptions);
 
   return (
     <Select
