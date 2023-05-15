@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Modal } from 'temp/imgFinder/Modal/Modal';
+import { Modal } from 'temp/ImgFinder/Modal/Modal';
 import css from '../styles/Styles.module.scss';
 
 export const GalleryItem = ({ normData, webformatURL, tags }) => {

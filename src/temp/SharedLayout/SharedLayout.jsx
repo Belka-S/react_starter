@@ -11,7 +11,9 @@ export const SharedLayout = () => {
           <NaviLink to="/" state={{ from: location }}>
             Home
           </NaviLink>
-          <NaviLink to="/_____">_____</NaviLink>
+          <NaviLink to="/tempClass">Class</NaviLink>
+          <NaviLink to="/tempHook">Hook</NaviLink>
+          <NaviLink to="/imgFinder">ImgFinder</NaviLink>
         </nav>
       </Header>
       <Outlet />

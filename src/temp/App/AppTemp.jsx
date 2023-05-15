@@ -1,14 +1,18 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 
-import { SharedLayout } from 'components/SharedLayout/SharedLayout';
-import Home from 'pages/Home';
-// import _____ from 'components/_____';
+import { SharedLayout } from 'temp/SharedLayout/SharedLayout';
+import Home from 'temp/Home';
+import AppHook from 'temp/Hook/App/AppHook';
+import AppClass from 'temp/Class/App/AppClass';
+import AppImgFinder from 'temp/ImgFinder/App/AppImgFinder';
 
-export const App = () => (
+export const AppTemp = () => (
   <Routes>
     <Route path="/" element={<SharedLayout />}>
       <Route index element={<Home />} />
-      {/* <Route path="/_____" element={<_____ />} /> */}
+      <Route path="/tempClass" element={<AppClass />} />
+      <Route path="/tempHook" element={<AppHook />} />
+      <Route path="/imgFinder" element={<AppImgFinder />} />
       <Route path="*" element={<Navigate to="/" />} />
     </Route>
   </Routes>
