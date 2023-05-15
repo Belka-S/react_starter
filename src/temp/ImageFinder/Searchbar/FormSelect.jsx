@@ -1,4 +1,5 @@
 import Select from 'react-select';
+import { useSelector } from 'react-redux';
 import { SAEARCH_OPTIONS } from 'temp/ImageFinder/services/image-api';
 
 // const customOptions = [{ value: 'custom', label: 'Select image type...' }];
@@ -47,51 +48,67 @@ const optionsPerPage = [
   { value: 162, label: '162 per page' },
 ];
 
-export const SelectPerPage = ({ handleSelect }) => (
-  <Select
-    onChange={(option, name) => handleSelect(option, name)}
-    name="per_page"
-    options={optionsPerPage}
-    styles={styles}
-    defaultValue={{ value: 24, label: '24 per page' }}
-    // placeholder={'Select...'}
-    // isClearable
-    // isDisabled={true}
-    // isMulti
-    // getOptionLabel={option => `${option.label}`}
-    // value={false}
-  />
-);
+export const SelectPerPage = ({ handleSelect }) => {
+  const state = useSelector(state => state.imgFinder);
+  const { per_page } = state.searchOptions;
+
+  return (
+    <Select
+      onChange={(option, name) => handleSelect(option, name)}
+      name="per_page"
+      options={optionsPerPage}
+      styles={styles}
+      defaultValue={
+        per_page && optionsPerPage.filter(el => el.value === per_page)
+      }
+    />
+  );
+};
 
 const optionsImagaType = SAEARCH_OPTIONS().image_type.map(el => ({
   value: el,
   label: el,
 }));
 
-export const SelectImageType = ({ handleSelect }) => (
-  <Select
-    onChange={(option, name) => handleSelect(option, name)}
-    placeholder={'Select type...'}
-    name="image_type"
-    options={optionsImagaType}
-    styles={styles}
-  />
-);
+export const SelectImageType = ({ handleSelect }) => {
+  const state = useSelector(state => state.imgFinder);
+  const { image_type } = state.searchOptions;
+
+  return (
+    <Select
+      onChange={(option, name) => handleSelect(option, name)}
+      placeholder={'Select type...'}
+      name="image_type"
+      options={optionsImagaType}
+      styles={styles}
+      defaultValue={
+        image_type && optionsImagaType.filter(el => el.value === image_type)
+      }
+    />
+  );
+};
 
 const optionsOrientation = SAEARCH_OPTIONS().orientation.map(el => ({
   value: el,
   label: el,
 }));
 
-export const SelectImageOrientation = ({ handleSelect }) => (
-  <Select
-    onChange={(option, name) => handleSelect(option, name)}
-    name="orientation"
-    options={optionsOrientation}
-    styles={styles}
-    defaultValue={{ value: 'horizontal', label: 'Horizontal' }}
-  />
-);
+export const SelectImageOrientation = ({ handleSelect }) => {
+  const state = useSelector(state => state.imgFinder);
+  const { orientation } = state.searchOptions;
+
+  return (
+    <Select
+      onChange={(option, name) => handleSelect(option, name)}
+      name="orientation"
+      options={optionsOrientation}
+      styles={styles}
+      defaultValue={
+        orientation && optionsOrientation.filter(el => el.value === orientation)
+      }
+    />
+  );
+};
 
 const optionsCategory = SAEARCH_OPTIONS().category.map(el => ({
   value: el,
