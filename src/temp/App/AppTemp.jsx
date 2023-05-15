@@ -4,7 +4,7 @@ import { SharedLayout } from 'temp/SharedLayout/SharedLayout';
 import Home from 'temp/Home';
 import AppHook from 'temp/Hook/App/AppHook';
 import AppClass from 'temp/Class/App/AppClass';
-import AppImgFinder from 'temp/ImgFinder/App/AppImgFinder';
+import AppImgFinder from 'temp/imgFinder/App/AppImgFinder';
 
 export const AppTemp = () => (
   <Routes>

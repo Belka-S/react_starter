@@ -1,5 +1,5 @@
 import Select from 'react-select';
-import { SAEARCH_OPTIONS } from 'temp/ImgFinder/services/image-api';
+import { SAEARCH_OPTIONS } from 'temp/imgFinder/services/image-api';
 
 // const customOptions = [{ value: 'custom', label: 'Select image type...' }];
 const styles = {

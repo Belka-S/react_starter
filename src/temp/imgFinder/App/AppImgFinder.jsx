@@ -1,12 +1,12 @@
 import { useReducer, useEffect } from 'react';
 
-import { Searchbar } from 'temp/ImgFinder/Searchbar/Searchbar';
-import * as imageAPI from 'temp/ImgFinder/services/image-api';
-import { normalize } from 'temp/ImgFinder/services/normalize';
-import { Gallery } from 'temp/ImgFinder/Gallery/Gallery';
-import { Button } from 'temp/ImgFinder/Button/Button';
-import { Loader } from 'temp/ImgFinder/Loader/Loader';
-import { Toast, notifyOk, notifyEnd } from 'temp/ImgFinder/Notification/Toast';
+import { Searchbar } from 'temp/imgFinder/Searchbar/Searchbar';
+import * as imageAPI from 'temp/imgFinder/services/image-api';
+import { normalize } from 'temp/imgFinder/services/normalize';
+import { Gallery } from 'temp/imgFinder/Gallery/Gallery';
+import { Button } from 'temp/imgFinder/Button/Button';
+import { Loader } from 'temp/imgFinder/Loader/Loader';
+import { Toast, notifyOk, notifyEnd } from 'temp/imgFinder/Notification/Toast';
 import css from '../styles/Styles.module.scss';
 
 const IDLE = 'idle';
