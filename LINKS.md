@@ -14,6 +14,7 @@
 - **[react-hook-form]**https://www.react-hook-form.com/get-started
 - **[react-tabs]**https://github.com/reactjs/react-tabs
 - **[react-select]**https://react-select.com/home
+- **[react-debounce-input]**https://github.com/nkbt/react-debounce-input
 - **[debounce-input]**https://github.com/nkbt/react-debounce-input
 - **[yup]**https://github.com/jquense/yup
 - **[yup-phone]**https://yup-phone.js.org
