@@ -1,17 +1,17 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
-import { Searchbar } from 'temp/imgFinder/Searchbar/Searchbar';
-import * as imageAPI from 'temp/imgFinder/services/image-api';
-import { normalize } from 'temp/imgFinder/services/normalize';
-import { Gallery } from 'temp/imgFinder/Gallery/Gallery';
-import { Button } from 'temp/imgFinder/Button/Button';
-import { Loader } from 'temp/imgFinder/Loader/Loader';
-import { Toast, notifyOk, notifyEnd } from 'temp/imgFinder/Notification/Toast';
+import { Searchbar } from 'temp/ImageFinder/Searchbar/Searchbar';
+import * as imageAPI from 'temp/ImageFinder/services/image-api';
+import { normalize } from 'temp/ImageFinder/services/normalize';
+import { Gallery } from 'temp/ImageFinder/Gallery/Gallery';
+import { Button } from 'temp/ImageFinder/Button/Button';
+import { Loader } from 'temp/ImageFinder/Loader/Loader';
+import { Toast } from 'temp/ImageFinder/Notification/Toast';
+import { notifyOk, notifyEnd } from 'temp/ImageFinder/Notification/Toast';
 import { idle, pending, rejected, resolved } from 'temp/redux/imgFinder/slice'; // slice
 import { newSearch, incrementPage } from 'temp/redux/imgFinder/slice'; //  reducer
-// import { is } from 'temp/ImgFinder/services/constants';
-import { PENDING, RESOLVED } from 'temp/imgFinder/services/constants';
+import { is } from 'temp/ImageFinder/services/constants';
 import css from '../styles/Styles.module.scss';
 
 const AppImgFinder = () => {
@@ -62,7 +62,7 @@ const AppImgFinder = () => {
   return (
     <section className={css.Grid}>
       <Searchbar
-        isLoading={status === PENDING}
+        isLoading={status === is.PENDING}
         searchQuery={searchQuery}
         handleSubmit={({ searchQuery }) => dispatch(idle({ searchQuery }))}
         handleSelect={({ value }, { name }) =>
@@ -74,8 +74,8 @@ const AppImgFinder = () => {
         }
       />
       <Gallery normData={normData} />
-      {status === PENDING && <Loader />}
-      {!isLastPage && status === RESOLVED && (
+      {status === is.PENDING && <Loader />}
+      {!isLastPage && status === is.RESOLVED && (
         <Button handleClick={() => dispatch(incrementPage())} />
       )}
       <Toast />

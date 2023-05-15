@@ -20,7 +20,7 @@ export const Toast = () => (
       style: {
         background: 'tomato',
         color: '#fff',
-        fontSize: '26px',
+        fontSize: '18px',
       },
 
       // Default options for specific types

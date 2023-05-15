@@ -1,15 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-// import { is } from 'temp/ImgFinder/services/constants';
-import {
-  IDLE,
-  PENDING,
-  RESOLVED,
-  REJECTED,
-} from 'temp/imgFinder/services/constants';
+import { is } from 'temp/ImageFinder/services/constants';
 
 const initialState = {
-  status: IDLE,
+  status: is.IDLE,
   error: null,
   normData: [],
   pageCount: 1,
@@ -41,7 +35,7 @@ const imgFinderSlice = createSlice({
     },
 
     idle: (state, action) => ({
-      status: IDLE,
+      status: is.IDLE,
       error: null,
       normData: [],
       pageCount: 1,
@@ -50,19 +44,19 @@ const imgFinderSlice = createSlice({
     }),
 
     pending: state => {
-      state.status = PENDING;
+      state.status = is.PENDING;
       state.error = null;
     },
 
     rejected: (state, action) => {
-      state.status = REJECTED;
+      state.status = is.REJECTED;
       state.isLastPage = true;
       state.error = action.payload;
     },
 
     resolved: (state, action) => ({
       ...state,
-      status: RESOLVED,
+      status: is.RESOLVED,
       pageCount: state.pageCount + 1,
       ...action.payload,
     }),

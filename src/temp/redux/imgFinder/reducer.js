@@ -1,15 +1,9 @@
 import { createReducer, createAction } from '@reduxjs/toolkit';
 
-// import { is } from 'temp/ImgFinder/services/constants';
-import {
-  IDLE,
-  PENDING,
-  RESOLVED,
-  REJECTED,
-} from 'temp/imgFinder/services/constants';
+import { is } from 'temp/ImageFinder/services/constants';
 
 const initialState = {
-  status: IDLE,
+  status: is.IDLE,
   error: null,
   normData: [],
   pageCount: 1,
@@ -51,7 +45,7 @@ export const imgFinderReducer = createReducer(initialState, {
   }),
 
   [idle]: (state, action) => ({
-    status: IDLE,
+    status: is.IDLE,
     error: null,
     normData: [],
     pageCount: 1,
@@ -65,20 +59,20 @@ export const imgFinderReducer = createReducer(initialState, {
 
   [pending]: state => ({
     ...state,
-    status: PENDING,
+    status: is.PENDING,
     error: null,
   }),
 
   [rejected]: (state, action) => ({
     ...state,
-    status: REJECTED,
+    status: is.REJECTED,
     isLastPage: true,
     error: action.payload,
   }),
 
   [resolved]: (state, action) => ({
     ...state,
-    status: RESOLVED,
+    status: is.RESOLVED,
     pageCount: state.pageCount + 1,
     ...action.payload,
   }),
