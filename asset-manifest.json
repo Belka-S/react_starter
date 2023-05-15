@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/react_starter/static/css/main.acacf59f.css",
-    "main.js": "/react_starter/static/js/main.dfd49adc.js",
+    "main.js": "/react_starter/static/js/main.01d872fb.js",
     "static/media/mark-error.png": "/react_starter/static/media/mark-error.c7382037fa3ac72abd91.png",
     "static/media/mark-question.png": "/react_starter/static/media/mark-question.d3d01b8354d2370156dc.png",
     "index.html": "/react_starter/index.html",
     "static/media/close.svg": "/react_starter/static/media/close.57c6a72f1cc33c2238edccb854ec56c0.svg",
     "main.acacf59f.css.map": "/react_starter/static/css/main.acacf59f.css.map",
-    "main.dfd49adc.js.map": "/react_starter/static/js/main.dfd49adc.js.map"
+    "main.01d872fb.js.map": "/react_starter/static/js/main.01d872fb.js.map"
   },
   "entrypoints": [
     "static/css/main.acacf59f.css",
-    "static/js/main.dfd49adc.js"
+    "static/js/main.01d872fb.js"
   ]
 }
