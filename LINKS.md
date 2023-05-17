@@ -43,10 +43,10 @@
 - **[]**
 - **[]**
 - **[]**
-- **[]**
 - **[redux]**https://redux.js.org/
 - **[react-redux]**https://react-redux.js.org/
 - **[redux-toolkit]**https://redux-toolkit.js.org/
+- **[redux-persist]**https://github.com/rt2zz/redux-persist
 
 # **react-homework-template**[https://github.com/goitacademy/react-homework-template]
 
