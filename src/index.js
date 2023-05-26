@@ -13,13 +13,13 @@ import { store, persistor } from 'temp/redux/store';
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <GlobalStyle />
-    <BrowserRouter basename="/react_starter">
-      <Provider store={store}>
-        <PersistGate loading={null} persistor={persistor}>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <BrowserRouter basename="/react_starter">
           {/* <App /> */}
           <AppTemp />
-        </PersistGate>
-      </Provider>
-    </BrowserRouter>
+        </BrowserRouter>
+      </PersistGate>
+    </Provider>
   </React.StrictMode>
 );

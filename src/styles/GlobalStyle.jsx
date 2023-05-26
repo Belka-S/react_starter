@@ -16,6 +16,22 @@ body {
   line-height: 1.5;
   color: #000000;
   background-color: #dbe4ed;
+
+  padding-left: 10px;
+  padding-right: 10px;
+   @media screen and (min-width: 320px) {
+    // max-width: 300px;
+  }
+  @media screen and (min-width: 768px) {
+    // max-width: 700px;
+    padding-left: 34px;
+    padding-right: 34px;
+  }
+  @media screen and (min-width: 1280px) {
+    // max-width: 1150px;
+    padding-left: 65px;
+    padding-right: 65px;
+  }
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
