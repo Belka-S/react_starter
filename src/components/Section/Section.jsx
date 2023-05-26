@@ -9,11 +9,11 @@ export const Section = ({
   paddingBottom,
   children,
 }) => (
-  <Container paddingTop={paddingTop} paddingBottom={paddingBottom}>
+  <SectionStyled paddingTop={paddingTop} paddingBottom={paddingBottom}>
     {mainTitle && <h1>{mainTitle}</h1>}
     {title && <h2>{title}</h2>}
     {children}
-  </Container>
+  </SectionStyled>
 );
 
 Section.propTypes = {

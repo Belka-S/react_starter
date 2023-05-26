@@ -7,20 +7,6 @@ export const Container = styled.div`
   position: relative;
   line-height: 1.3;
   background-color: #dbe4ed;
-
-  @media screen and (min-width: 320px) {
-    // max-width: 300px;
-  }
-  @media screen and (min-width: 768px) {
-    padding-right: 34px;
-    padding-left: 34px;
-    // max-width: 700px;
-  }
-  @media screen and (min-width: 1280px) {
-    padding-right: 65px;
-    padding-left: 65px;
-    // max-width: 1150px;
-  }
 `;
 
 export const Header = styled.header`

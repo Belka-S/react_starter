@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const SectionStyled = styled.section`
+  position: relative;
+  line-height: 1.3;
   h1,
   h2 {
     padding-bottom: 2px;
@@ -9,7 +11,6 @@ export const SectionStyled = styled.section`
       color: tomato;
     }
   }
-
   h1 {
     padding-top: 5px;
     text-align: center;
@@ -18,30 +19,27 @@ export const SectionStyled = styled.section`
       color: inherit;
     }
   }
-
+  padding-top: 10px;
+  padding-bottom: ${({ paddingBottom }) => paddingBottom}px;
   @media screen and (min-width: 320px) {
     // max-width: 300px;
   }
-
   @media screen and (min-width: 768px) {
-    h1 {
-      padding-top: 10px;
-      font-size: 26px;
-    }
+    // max-width: 700px;
+    padding-top: 15px;
+    padding-bottom: ${({ paddingBottom }) => paddingBottom}px;
     h1,
     h2 {
-      padding-bottom: 5px;
+      margin-bottom: 10px;
     }
   }
-
   @media screen and (min-width: 1280px) {
-    h1 {
-      padding-top: 20px;
-      font-size: 30px;
-    }
+    // max-width: 1150px;
+    padding-top: 30px;
+    padding-bottom: ${({ paddingBottom }) => paddingBottom}px;
     h1,
     h2 {
-      padding-bottom: 10px;
+      margin-bottom: 20px;
     }
   }
 `;
