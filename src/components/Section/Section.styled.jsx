@@ -19,14 +19,14 @@ export const SectionStyled = styled.section`
       color: inherit;
     }
   }
-  padding-top: 10px;
+  padding-top: ${({ paddingTop }) => paddingTop}px;
   padding-bottom: ${({ paddingBottom }) => paddingBottom}px;
   @media screen and (min-width: 320px) {
     // max-width: 300px;
   }
   @media screen and (min-width: 768px) {
     // max-width: 700px;
-    padding-top: 15px;
+    padding-top: ${({ paddingTop }) => paddingTop}px;
     padding-bottom: ${({ paddingBottom }) => paddingBottom}px;
     h1,
     h2 {
@@ -35,7 +35,7 @@ export const SectionStyled = styled.section`
   }
   @media screen and (min-width: 1280px) {
     // max-width: 1150px;
-    padding-top: 30px;
+    padding-top: ${({ paddingTop }) => paddingTop}px;
     padding-bottom: ${({ paddingBottom }) => paddingBottom}px;
     h1,
     h2 {
