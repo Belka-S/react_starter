@@ -30,22 +30,16 @@
 - **[react-query]**https://tanstack.com/query/latest/docs/react/overview
 - **[react-use]**https://github.com/streamich/react-use#readme
 - **[hh-mm-ss]**https://www.npmjs.com/package/hh-mm-ss
+- **[MaterialUI]**https://mui.com/
 - **[]**
 - **[]**
 - **[]**
 - **[]**
 - **[]**
-- **[]**
-- **[]**
-- **[]**
-- **[]**
-- **[]**
-- **[]**
-- **[]**
-- **[]**
-- **[redux]**https://redux.js.org/
-- **[react-redux]**https://react-redux.js.org/
-- **[redux-toolkit]**https://redux-toolkit.js.org/
+- **[zustand]**https://github.com/pmndrs/zustand
+- **[redux]**https://redux.js.org
+- **[react-redux]**https://react-redux.js.org
+- **[redux-toolkit]**https://redux-toolkit.js.org
 - **[redux-persist]**https://github.com/rt2zz/redux-persist
 
 # **react-homework-template**[https://github.com/goitacademy/react-homework-template]
